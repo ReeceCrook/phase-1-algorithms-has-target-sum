@@ -1,9 +1,20 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+  for(let i = 0; i < array.length; i++){
+    for(let j = i + 1; j < array.length; j++){
+      if(array[i] + array[j] === target){
+        return true
+      }
+    }
+   }
+   return false
+ }
+  
+
 
 /* 
   Write the Big O time complexity of your function here
+  O(n)
 */
 
 /* 
@@ -12,6 +23,7 @@ function hasTargetSum(array, target) {
 
 /*
   Add written explanation of your solution here
+  I did two for loops so that I could compare 2 different numbers until I got the desired result
 */
 
 // You can run `node index.js` to view these console logs
